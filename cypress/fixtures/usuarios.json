@@ -1,0 +1,24 @@
+{
+  "usuarioPadrao": {
+    "genero": "female",
+    "nome": "QA Tester PGATS",
+    "senha": "Password@123",
+    "diaNascimento": "15",
+    "mesNascimento": "September",
+    "anoNascimento": "1992",
+    "primeiroNome": "QA",
+    "ultimoNome": "Tester",
+    "empresa": "VINCIT QA Labs",
+    "endereco": "Avenida Paulista, 1000",
+    "endereco2": "Andar 10, Sala 102",
+    "pais": "United States",
+    "estado": "California",
+    "cidade": "Los Angeles",
+    "cep": "90001",
+    "celular": "+1 555 123 4567"
+  },
+  "usuarioInvalido": {
+    "email": "usuario_inexistente_pgats@invalido.com",
+    "senha": "senhaInvalida123"
+  }
+}

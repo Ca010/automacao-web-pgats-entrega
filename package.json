@@ -1,0 +1,29 @@
+{
+  "name": "automacao-web-pgats-automation-exercise",
+  "version": "1.0.0",
+  "description": "Projeto de Conclusão - Automação de Testes Web com Cypress e Arquitetura de Módulos de Ações de Negócio",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --spec \"cypress/e2e/automation-exercise.cy.js\"",
+    "test": "cypress run --browser chrome --headless --spec \"cypress/e2e/automation-exercise.cy.js\"",
+    "test:electron": "cypress run --headless",
+    "report:clean": "rimraf cypress/reports",
+    "clean:zip": "powershell -ExecutionPolicy Bypass -File ./scripts/package-clean-zip.ps1"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "testing",
+    "qa",
+    "pgats",
+    "automation-exercise"
+  ],
+  "author": "PGATS",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.4.0",
+    "cypress": "^13.17.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
+  }
+}

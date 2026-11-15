@@ -1,0 +1,45 @@
+name: Testes E2E Cypress - Automation Exercise
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  cypress-e2e:
+    name: Execução dos Testes Web (Chrome Headless)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar Dependências
+        run: npm ci
+
+      - name: Executar Testes E2E (Cypress)
+        run: npx cypress run --browser chrome --headless
+
+      - name: Publicar Relatório Mochawesome (Artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-mochawesome-html
+          path: cypress/reports
+          retention-days: 30
+
+      - name: Publicar Screenshots em Caso de Falha
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          retention-days: 15

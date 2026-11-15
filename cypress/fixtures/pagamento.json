@@ -1,0 +1,10 @@
+{
+  "cartaoValido": {
+    "nomeNoCartao": "QA Tester PGATS",
+    "numeroCartao": "4111111111111111",
+    "cvc": "311",
+    "mesExpiracao": "12",
+    "anoExpiracao": "2028",
+    "comentario": "Pedido de teste automatizado - PGATS Modulo 08 Web"
+  }
+}
